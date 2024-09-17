@@ -75,3 +75,52 @@ def accuracy_v2(y_true, y_pred):
     tn = true_negative(y_true, y_pred)
     accuracy_score = (tp + tn) / (tp + tn + fp + fn)
     return accuracy_score
+
+# Precision = TP / (TP + FP)
+def precision(y_true, y_pred):
+    """
+    Function to calculate precision
+    :param y_true: list of true values
+    :param y_pred: list of predicted values
+    :return: precision score
+    """
+    tp = true_positive(y_true, y_pred)
+    fp = false_positive(y_true, y_pred)
+    precision = tp / (tp + fp)
+    return precision
+
+# Recall = TP / (TP + FN)
+def recall(y_true, y_pred):
+    """
+    Function to calculate recall
+    :param y_true: list of true values
+    :param y_pred: list of predicted values
+    :return: recall score
+    """
+    tp = true_positive(y_true, y_pred)
+    fn = false_negative(y_true, y_pred)
+    recall = tp / (tp + fn)
+    return recall
+
+'''
+Both precision and recall range from 0 to 1 and a value closer to 1 is better.
+F1 score is a metric that combines both precision and recall. It is defined as a simple
+weighted average (harmonic mean) of precision and recall. If we denote precision
+using P and recall using R, we can represent the F1 score as:
+F1 = 2PR / (P + R)
+'''
+def f1(y_true, y_pred):
+    """
+    Function to calculate f1 score
+    :param y_true: list of true values
+    :param y_pred: list of predicted values
+    :return: f1 score
+    """
+    p = precision(y_true, y_pred)
+    r = recall(y_true, y_pred)
+    score = 2 * p * r / (p + r)
+    return score
+
+# A perfection prediction model has a f1 score of 1
+# When dealing with skewed datasets look as f1 score instead of accuracy
+
