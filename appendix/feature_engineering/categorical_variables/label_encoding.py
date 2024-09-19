@@ -1,3 +1,7 @@
+'''
+Use mostly with tree based models - decision, random, xgboost, gbm
+'''
+
 import pandas as pd
 from sklearn import preprocessing
 # read the data

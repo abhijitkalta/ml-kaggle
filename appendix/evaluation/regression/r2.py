@@ -28,7 +28,7 @@ def r2(y_true, y_pred):
     # calculate the ratio
     ratio = numerator / denominator
     # return 1 - ratio
-    return 1 – ratio
+    return 1 - ratio
 
 '''One of them which is quite widely used is quadratic weighted kappa, also known
 as QWK. It is also known as Cohen’s kappa. QWK measures the “agreement”

@@ -1,3 +1,7 @@
+'''
+Use mostly with linear models, svm, neural networks
+'''
+
 import numpy as np
 from sklearn import preprocessing
 # create random 1-d array with 1001 different categories (int)
