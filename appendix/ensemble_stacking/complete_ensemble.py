@@ -40,7 +40,8 @@ fold2_preds = np.column_stack((
 pred_logreg,
 pred_rf,
 pred_xgbc,
-avg_pred
+avg_pred,
+
 ))
 # calculate and store individual AUC values
 aucs_fold2 = []
