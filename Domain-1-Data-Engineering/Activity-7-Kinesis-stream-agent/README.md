@@ -26,6 +26,7 @@ find /var/log/httpd -type d -exec sudo chmod 2775 {} +
 ```
 
 # Configure Kinesis Agent
+
 ```
 sudo yum install –y https://s3.amazonaws.com/streaming-data-agent/aws-kinesis-agent-latest.amzn2.noarch.rpm
 
@@ -40,8 +41,8 @@ sudo nano /etc/aws-kinesis/agent.json
   "cloudwatch.emitMetrics": true,
   "kinesis.endpoint": "",
   "firehose.endpoint": "",
-  "awsAccessKeyId": "AKIA4TUWD7OIFVMQJJFK",
-  "awsSecretAccessKey": "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",
+  "awsAccessKeyId": "enter access key",
+  "awsSecretAccessKey": "enter secret",
   "flows": [
     {
       "filePattern": "/var/log/httpd/access_log",
@@ -52,9 +53,11 @@ sudo nano /etc/aws-kinesis/agent.json
 }
 
 ```
+
 `cat /etc/aws-kinesis/agent.json`
 
 ## Stop and Start agent
+
 ```
 sudo service aws-kinesis-agent stop
 sudo service aws-kinesis-agent start
@@ -62,5 +65,3 @@ cd /var/log/aws-kinesis-agent/
 ls -ltr
 head -10 aws-kinesis-agent.log
 ```
-
-
