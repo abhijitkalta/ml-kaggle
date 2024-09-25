@@ -41,8 +41,8 @@ sudo nano /etc/aws-kinesis/agent.json
   "cloudwatch.emitMetrics": true,
   "kinesis.endpoint": "",
   "firehose.endpoint": "",
-  "awsAccess KeyId": "enter access key",
-  "awsSecretAccess Key": "enter secret",
+  "awsAccessKeyId": ,
+  "awsSecretAccessKey": ,
   "flows": [
     {
       "filePattern": "/var/log/httpd/access_log",
