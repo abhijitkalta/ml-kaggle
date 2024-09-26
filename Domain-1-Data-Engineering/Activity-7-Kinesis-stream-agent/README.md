@@ -19,7 +19,7 @@ groupadd httpd
 usermod -a -G httpd ec2-user
 exit
 
-groups
+group
 sudo chown -R root:httpd /var/log/httpd
 sudo chmod 2775 /var/log/httpd
 find /var/log/httpd -type d -exec sudo chmod 2775 {} +
